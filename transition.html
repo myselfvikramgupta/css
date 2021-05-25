@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color:#161C24;
+       
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color:inherit;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    .box{
+        width: 300px;
+        height: 70px;
+        background-color:#212B36;
+        border-radius:5px;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        margin-bottom: 20px;
+    }
+ span{
+     font-size:2rem;
+     color: rgb(79, 255, 132);
+     letter-spacing:2px;
+    
+     /* text-shadow: 0 0 10px rgba(79,255,132,0.6),
+                  0 0 20px rgba(79,255,132,0.7),
+                  0 0 30px rgba(79,255,132,0.8),
+                  0 0 40px rgba(79,255,132,0.9); */
+   
+ }
+ .linear{
+    transition:width 2s linear;
+ }
+ .linear:hover{
+     width:500px;
+     
+ }
+ .ease{
+    transition:width 2s ease;
+ }
+ .ease:hover{
+     width:500px;
+     
+ }
+ .ease-in{
+    transition:width 2s ease-in;
+ }
+ .ease-in:hover{
+     width:500px;
+     
+ }
+ .ease-out{
+    transition:width 2s ease-out;
+ }
+ .ease-out:hover{
+     width:500px;
+     
+ }
+ .ease-in-out{
+    transition:width 2s ease-in-out;
+ }
+ .ease-in-out:hover{
+     width:500px;
+     
+ }
+ .cubic-bezier{
+    transition:width 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+ }
+ .cubic-bezier:hover{
+     width:500px;
+     
+ }
+ .linear span{
+    animation: textGlow 3s infinite 1s;
+ }
+ .ease span{
+    animation: textGlow 3s infinite 2s;
+ }
+ .ease-in span{
+    animation: textGlow 3s infinite 3s;
+ }
+ .ease-out span{
+    animation: textGlow 3s infinite 4s;
+ }
+ .ease-in-out span{
+    animation: textGlow 3s infinite 5s;
+ }
+ .cubic-bezier span{
+    animation: textGlow 3s infinite 6s;
+ }
+ .card{
+     position: relative;
+ }
+ /* .inner_box{
+     position:absolute;
+     top:0;
+     right: 0;
+     width:0px;
+     height:100%;
+     background-color:#5BE584;
+     cursor: pointer;
+     transition:width 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+ }
+ .card:hover .inner_box{
+     width:100%;
+     height:100%;
+  
+ } */
+ 
+   @keyframes textGlow{
+       from{
+        text-shadow: 0 0 40px rgba(79,255,132,0.9);
+                  
+       }
+       to{
+        text-shadow: 0 0 10px rgba(79,255,132,0.6),
+                  0 0 20px rgba(79,255,132,0.7),
+                  0 0 30px rgba(79,255,132,0.8),
+                  0 0 40px rgba(79,255,132,0.9);
+       }
+   }
+    /* .inner_box:hover{
+        transform:translate(0, -50px);
+        transition: transform 2s ease-in-out;
+    } */
+</style>
+<body>
+    
+    <div class="container">
+            <div class="box linear ">
+                <span>linear</span>
+            </div>
+            <div class="box ease card">
+                <span>ease</span>
+                <div class="inner_box">
+                </div>
+            </div>
+            <div class="box ease-in">
+                <span>ease-in </span>
+            </div>
+            <div class="box ease-out">
+                <span>ease-out</span>
+            </div>
+            <div class="box ease-in-out">
+                <span>ease-in-out</span>
+            </div>
+            <div class="box cubic-bezier">
+                <span>cubic-bezier</span>
+            </div>
+    </div>
+
+</body>
+</html>

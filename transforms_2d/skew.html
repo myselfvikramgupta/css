@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color:#212B36;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:50px;
+        
+    }
+    .box{
+        width: 300px;
+        height:400px;
+        background-color:#637381;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 2s ease-in-out;
+    }
+    span{
+        font-size:2em;
+        color:#212B36;
+    }
+    .skew:hover{
+        transform:skew(10deg);
+        transition: all 2s ease-in-out;
+    }
+    .skewX:hover{
+        transform:skewX(10deg);
+        transition: all 2s ease-in-out;
+    }
+    .skewY:hover{
+        transform:skewY(10deg);
+        transition: all 2s ease-in-out;
+    }
+</style>
+<body>
+        <div class="box skew">
+            <span>skew</span>
+        </div>
+        <div class="box skewX">
+            <span>skewX</span>
+        </div>
+        <div class="box skewY">
+            <span>skewY</span>
+        </div>
+</body>
+</html>
